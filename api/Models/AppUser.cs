@@ -8,6 +8,6 @@ namespace api.Models
 {
     public class AppUser : IdentityUser
     {
-        
+        public List<RoomMember> RoomMembers { get; set; } = new List<RoomMember>();
     }
 }
