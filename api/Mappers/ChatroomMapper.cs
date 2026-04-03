@@ -27,13 +27,12 @@ namespace api.Mappers
             };
         }
 
-        public static Chatroom ToChatroomFromUpdate(this UpdateChatroomDto updateChatroom)
+        public static void ToChatroomFromUpdate(this UpdateChatroomDto updateChatroom,Chatroom chatroom)
         {
-            return new Chatroom
-            {
-                Name = updateChatroom.Name,
-                Type = updateChatroom.Type
-            };
+            
+                chatroom.Name = updateChatroom.Name;
+                chatroom.Type = updateChatroom.Type;
+            
         }
     }
 }
