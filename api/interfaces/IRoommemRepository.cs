@@ -10,6 +10,6 @@ namespace api.interfaces
     {
         Task<List<Chatroom>> GetUserRoomAsync(string userId);
         Task<RoomMember> CreateAsync(RoomMember roomMember);
-        Task<RoomMember?> DeleteRoomMem(string userId,int RoomId);
+        Task<RoomMember?> DeleteRoomMem(string userId,int roomId);
     }
 }
