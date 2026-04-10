@@ -9,7 +9,7 @@ namespace api.interfaces
 {
     public interface IChatroomRepository
     {
-        Task<List<Chatroom>> GetAllChatroom(QueryObject query);
+        Task<List<Chatroom>> GetAllAsync(QueryObject query);
         Task<Chatroom?> GetByIdAsync(int id);
         Task<Chatroom> CreateAsync(Chatroom chatroomModel);
         Task<Chatroom?> UpdateAsync(int id, Chatroom chatroomModel);
