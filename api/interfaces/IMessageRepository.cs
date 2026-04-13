@@ -11,6 +11,7 @@ namespace api.interfaces
     {
         Task<List<Massages>> GetAllAsync(MessageQuery messageQuery);
         Task<Massages?> GetByIdAsync(int id);
+        Task<List<Massages>> GetMessagesByRoomIdAsync(int roomId);
         Task<Massages> CreateAsync(Massages massagesModel);
         Task<Massages?> UpdateAsync(int id, Massages massagesModel);
         Task<Massages?> DeleteAsync(int id);
