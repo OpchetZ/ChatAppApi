@@ -1,6 +1,7 @@
 using api.Data;
 using api.interfaces;
 using api.Models;
+using api.Repository;
 using api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -83,6 +84,9 @@ builder.Services.AddAuthentication(options => {
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IChatroomRepository, ChatroomRepository>(); 
+builder.Services.AddScoped<IRoommemRepository, RoommemRepository>();   
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 
 var app = builder.Build();
 
