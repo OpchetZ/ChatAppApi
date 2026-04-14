@@ -51,7 +51,7 @@ namespace api.Controllers
 
             return Ok(roomDtos);
         }
-        [HttpPost("{roodId}")]
+        [HttpPost("{roomId}")]
         [Authorize]
         public async Task<IActionResult> JoinRoomAsync([FromRoute] int roomId)
         {
