@@ -16,7 +16,7 @@ namespace api.Mappers
               Id = massagesModel.Id,
               Content = massagesModel.Content,
               SentAt = massagesModel.SentAt,
-              SenderId = massagesModel.SenderId,
+              SenderName = massagesModel.AppUser?.UserName ?? "Unknown User",
               RoomId = massagesModel.RoomId
             };
         }
