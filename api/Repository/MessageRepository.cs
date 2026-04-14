@@ -64,5 +64,9 @@ namespace api.Repository
 
             return checkmessage;
         }
+        public async Task<List<Massages>> GetMessagesByRoomIdAsync(int roomId)
+        {
+            return await _context.Massages.Include(m => m.AppUser).Where(m => m.RoomId == roomId).ToListAsync();
+        }
     }
 }

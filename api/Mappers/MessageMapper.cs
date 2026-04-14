@@ -30,13 +30,12 @@ namespace api.Mappers
               SenderId = SenderId
             };
         }
-        public static void ToMessageFromUpdate(this UpdateMessageDto updateMessageDto, Massages existmass)
+        public static Massages ToMessageFromUpdate(this UpdateMessageDto updateMessageDto)
         {
-            
-              
-              existmass.Content = updateMessageDto.Content;
-             
-           
+            return new Massages
+            {
+              Content = updateMessageDto.Content  
+            };
         }
         
     }
